@@ -12,11 +12,13 @@ install_minio() {
   binary_path="${bin_install_path}/minio"
   download_url=$(get_download_url "${version}")
 
-  echo "Creating bin directory"
+  echo "Creating minio bin directory"
+  echo "${bin_install_path}"
   mkdir -p "${bin_install_path}"
 
-  echo "Downloading minio from ${download_url}"
-  curl --fail -Lo "${binary_path}" "${download_url}"
+  #echo "Downloading minio from ${download_url}"
+  #curl --fail -Lo "${binary_path}" "${download_url}"
+  cp /Users/yuntiankong/Downloads/minio "${binary_path}"
   chmod +x "${binary_path}"
 }
 
